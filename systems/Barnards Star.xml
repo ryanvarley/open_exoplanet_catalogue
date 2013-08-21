@@ -1,0 +1,38 @@
+<system>
+	<name>Barnards Star</name>
+	<rightascension>17 57 48</rightascension>
+	<declination>+04 41 36</declination>
+	<distance>1.834</distance>
+	<star>
+		<name>Barnards Star</name>
+		<spectraltype>M3.5V</spectraltype>
+		<mass>0.144</mass>
+		<radius>0.196</radius>
+		<temperature>3134</temperature>
+		<metallicity>0.21</metallicity>
+		<magV>9.511</magV>
+		<magK>4.524</magK>
+		<planet>
+			<name>Barnards Star b (Ocean)</name>
+			<mass>0.005978038574</mass>
+			<radius>0.1338210367</radius>
+			<period>8.7928</period>
+			<semimajoraxis>0.04370</semimajoraxis>
+			<discoverymethod>transit</discoverymethod>
+			<temperature>320</temperature>
+			<molweight>10</molweight>
+			<list>Fake Planet</list>
+		</planet>
+		<planet>
+			<name>Barnard's Star b (Terrestrial)</name>
+			<mass>0.01415851241</mass>
+			<radius>0.1338210367</radius>
+			<period>8.7928</period>
+			<semimajoraxis>0.04370</semimajoraxis>
+			<discoverymethod>transit</discoverymethod>
+			<temperature>320</temperature>
+			<molweight>2</molweight>
+			<list>Fake Planet</list>
+		</planet>
+	</star>
+</system>

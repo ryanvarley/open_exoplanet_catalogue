@@ -1,0 +1,38 @@
+<system>
+	<name>Lalande 21185</name>
+	<rightascension>11 03 20</rightascension>
+	<declination>+35 58 11</declination>
+	<distance>2.547</distance>
+	<star>
+		<name>Lalande 21185</name>
+		<spectraltype>M2V</spectraltype>
+		<mass>0.46</mass>
+		<radius>0.393</radius>
+		<temperature>3828</temperature>
+		<metallicity>0.2</metallicity>
+		<magV>7.520</magV>
+		<magK>3.34</magK>
+		<planet>
+			<name>Lalande 21185 b (Ocean)</name>
+			<mass>0.005978038574</mass>
+			<radius>0.1338210367</radius>
+			<period>25.4541</period>
+			<semimajoraxis>0.13073</semimajoraxis>
+			<discoverymethod>transit</discoverymethod>
+			<temperature>320</temperature>
+			<molweight>10</molweight>
+			<list>Fake Planet</list>
+		</planet>
+		<planet>
+			<name>Lalande 21185 b (Terrestrial)</name>
+			<mass>0.01415851241</mass>
+			<radius>0.1338210367</radius>
+			<period>25.4541</period>
+			<semimajoraxis>0.13073</semimajoraxis>
+			<discoverymethod>transit</discoverymethod>
+			<temperature>320</temperature>
+			<molweight>2</molweight>
+			<list>Fake Planet</list>
+		</planet>
+	</star>
+</system>

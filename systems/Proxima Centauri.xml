@@ -1,0 +1,38 @@
+<system>
+	<name>Proxima Centauri</name>
+	<rightascension>14 29 43</rightascension>
+	<declination>-62 40 46</declination>
+	<distance>1.3</distance>
+	<star>
+		<name>Proxima Centauri</name>
+		<spectraltype>M6.0V</spectraltype>
+		<mass>0.11</mass>
+		<radius>0.141</radius>
+		<temperature>3042</temperature>
+		<metallicity>0.21</metallicity>
+		<magV>11.05</magV>
+		<magK>4.384</magK>
+		<planet>
+			<name>Proxima Centauri b (Ocean)</name>
+			<mass>0.005978038574</mass>
+			<radius>0.1338210367</radius>
+			<period>5.6135</period>
+			<semimajoraxis>0.02974</semimajoraxis>
+			<discoverymethod>transit</discoverymethod>
+			<temperature>320</temperature>
+			<molweight>10</molweight>
+			<list>Fake Planet</list>
+		</planet>
+		<planet>
+			<name>Proxima Centauri b (Terrestrial)</name>
+			<mass>0.01415851241</mass>
+			<radius>0.1338210367</radius>
+			<period>5.6135</period>
+			<semimajoraxis>0.02974</semimajoraxis>
+			<discoverymethod>transit</discoverymethod>
+			<molweight>2</molweight>
+			<temperature>320</temperature>
+			<list>Fake Planet</list>
+		</planet>
+	</star>
+</system>
