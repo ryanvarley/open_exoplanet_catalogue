@@ -110,6 +110,28 @@
 			<discoveryyear>2010</discoveryyear>
 			<temperature>230.9</temperature>
 		</planet>
+		<planet>
+			<name>Gliese 581 x (Terrestrial)</name>
+			<mass>0.01415851241</mass>
+			<radius>0.1338210367</radius>
+			<period>14.765</period>
+			<semimajoraxis>0.07972</semimajoraxis>
+			<discoverymethod>transit</discoverymethod>
+			<molweight>2</molweight>
+			<temperature>320</temperature>
+			<list>Fake Planet</list>
+		</planet>
+		<planet>
+			<name>Gliese 581 x (Ocean)</name>
+			<mass>0.005978038574</mass>
+			<radius>0.1338210367</radius>
+			<period>14.765</period>
+			<semimajoraxis>0.07972</semimajoraxis>
+			<discoverymethod>transit</discoverymethod>
+			<molweight>10</molweight>
+			<temperature>320</temperature>
+			<list>Fake Planet</list>
+		</planet>
 		<name>Gliese 581</name>
 		<temperature>3498.0</temperature>
 	</star>
