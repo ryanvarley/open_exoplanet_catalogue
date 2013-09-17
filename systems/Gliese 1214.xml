@@ -38,6 +38,50 @@ Credit: NASA, ESA, and D. Aguilar (Harvard-Smithsonian Center for Astrophysics).
 			<temperature>519.6</temperature>
 			<transittime errorminus="0.0000901" errorplus="0.0000901" unit="HJD">2454983.9087558</transittime>
 		</planet>
+		<planet>
+			<name>Gliese 1214 Jupiter 350K</name>
+			<list>fake planets</list>
+			<mass>1.0</mass>
+			<radius>1.0</radius>
+			<period>6.562356</period>
+			<semimajoraxis>0.0366989</semimajoraxis>
+			<eccentricity>0</eccentricity>
+			<discoverymethod>transit</discoverymethod>
+			<temperature>350</temperature>
+		</planet>
+		<planet>
+			<name>Gliese 1214 Jupiter 300K</name>
+			<list>fake planets</list>
+			<mass>1.0</mass>
+			<radius>1.0</radius>
+			<period>10.4207770</period>
+			<semimajoraxis>0.04995131</semimajoraxis>
+			<eccentricity>0</eccentricity>
+			<discoverymethod>transit</discoverymethod>
+			<temperature>300</temperature>
+		</planet>
+		<planet>
+			<name>Gliese 1214 super-Earth 300K</name>
+			<list>fake planets</list>
+			<mass>0.01572787843674286</mass>
+			<radius>0.16403427214601424</radius>
+			<period>10.4207770</period>
+			<semimajoraxis>0.04995131</semimajoraxis>
+			<eccentricity>0</eccentricity>
+			<discoverymethod>transit</discoverymethod>
+			<temperature>300</temperature>
+		</planet>
+		<planet>
+			<name>Gliese 1214 super-Earth 350K</name>
+			<list>fake planets</list>
+			<mass>0.01572787843674286</mass>
+			<radius>0.16403427214601424</radius>
+			<period>6.562356</period>
+			<semimajoraxis>0.0366989</semimajoraxis>
+			<eccentricity>0</eccentricity>
+			<discoverymethod>transit</discoverymethod>
+			<temperature>350</temperature>
+		</planet>
 		<name>Gliese 1214</name>
 		<temperature>3026.0</temperature>
 	</star>
