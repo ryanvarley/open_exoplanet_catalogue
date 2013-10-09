@@ -1,0 +1,28 @@
+<system>
+	<name>Proxima Centauri</name>
+	<rightascension>14 29 43</rightascension>
+	<declination>-62 40 46</declination>
+	<distance>1.3</distance>
+	<star>
+		<name>Proxima Centauri</name>
+		<spectraltype>M6.0V</spectraltype>
+		<mass>0.11</mass>
+		<radius>0.141</radius>
+		<temperature>3042</temperature>
+		<metallicity>0.21</metallicity>
+		<magV>11.05</magV>
+		<magK>4.384</magK>
+		<planet>
+			<name>SuperEarth (like GJ 1214 b)</name>
+			<list>Fake planets</list>
+			<mass>0.02</mass>
+			<radius>0.245</radius>
+			<period></period>
+			<semimajoraxis></semimajoraxis>
+			<eccentricity>0.0</eccentricity>
+			<inclination>90</inclination>
+			<discoverymethod>transit</discoverymethod>
+			<temperature>300</temperature>
+		</planet>
+	</star>
+</system>
