@@ -2,12 +2,13 @@
 	<name>Proxima Centauri</name>
 	<rightascension>14 29 43</rightascension>
 	<declination>-62 40 46</declination>
-	<distance>6</distance>
+	<distance>10</distance>
 	<star>
 		<name>Proxima Centauri</name>
 		<spectraltype>M6.0V</spectraltype>
+		<mass>0.11</mass>
 		<radius>0.23</radius>
-		<temperature>3070</temperature>
+		<temperature>3310</temperature>
 		<metallicity>0.21</metallicity>
 		<magV>11.05</magV>
 		<magK>4.384</magK>
