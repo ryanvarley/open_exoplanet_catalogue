@@ -1,6 +1,10 @@
 Open Exoplanet Catalogue
 ==============
 
+[![Travis](http://img.shields.io/travis/OpenExoplanetCatalogue/open_exoplanet_catalogue/master.svg?style=flat)](https://travis-ci.org/OpenExoplanetCatalogue/open_exoplanet_catalogue/)
+[![MIT](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](http://opensource.org/licenses/MIT)
+[![arXiv](http://img.shields.io/badge/arXiv-1211.7121-orange.svg?style=flat)](http://arxiv.org/abs/1211.7121)
+
 The Open Exoplanet Catalogue is a database of all discovered extra-solar planets. New planets are usually added within 24 hours of their announcement.
 
 The database is licensed under an MIT license (see below), which basically says you can do everything with it. If you use it for a scientific publication, please include a reference to the Open Exoplanet Catalogue on [github](https://github.com/hannorein/open_exoplanet_catalogue) or to [this arXiv paper](http://arxiv.org/abs/1211.7121).  
@@ -8,6 +12,37 @@ The database is licensed under an MIT license (see below), which basically says 
 The catalogue is a community project. Please send corrections and additions via pull request or [email](mailto:exoplanet@hanno-rein.de). If you have questions or comments about git or the database, please do not hesitate to contact of the contributors directly.
 
 If you are looking for a simple comma/tab separated table, you might want to check out [this repository](https://github.com/hannorein/oec_tables/).
+
+How to access the catalogue using Python 
+--------------
+It is very easy to access the Open Exoplanet Catalogue using python. Here is a short [snippet](https://gist.github.com/hannorein/2a069763cf114f66641c) to print out some basic planet data. No download, no installation and no external libraries are required.
+
+```python
+# python 2.x
+import xml.etree.ElementTree as ET, urllib, gzip, io
+url = "https://github.com/OpenExoplanetCatalogue/oec_gzip/raw/master/systems.xml.gz"
+oec = ET.parse(gzip.GzipFile(fileobj=io.BytesIO(urllib.urlopen(url).read())))
+ 
+# Output mass and radius of all planets 
+for planet in oec.findall(".//planet"):
+    print [planet.findtext("mass"), planet.findtext("radius")]
+ 
+# Find all circumbinary planets 
+for planet in oec.findall(".//binary/planet"):
+    print planet.findtext("name")
+ 
+# Output distance to planetary system (in pc, if known) and number of planets in system
+for system in oec.findall(".//system"):
+    print system.findtext("distance"), len(system.findall(".//planet"))
+```
+
+If you are using python 3, replace the first three lines by 
+
+```python
+import xml.etree.ElementTree as ET, urllib.request, gzip, io
+url = "https://github.com/OpenExoplanetCatalogue/oec_gzip/raw/master/systems.xml.gz"
+oec = ET.parse(gzip.GzipFile(fileobj=io.BytesIO(urllib.request.urlopen(url).read())))
+```
 
 Data Structure
 -------------
@@ -25,26 +60,31 @@ The following table shows all the possible tags in the Open Exoplanet Catalogue.
 | `distance`		| `system` | Distance from the Sun | parsec   |
 | `name`		| `system`, `binary`, `star`, `planet` | Name of this object. This tag can be used multiple times if the object has multiple Names. |   |
 | `semimajoraxis` 	| `binary`, `planet` | Semi-major axis of a planet (heliocentric coordinates) if child of `planet`. Semi-major axis of the binary if child of `binary`. |  AU |
+| `separation`	 	| `binary`, `planet` | Projected separation of planet from its host, or if child of `binary` the projected separation from one component to the other. This tag can occur multiple times with different units. It is different from the tag `semimajoraxis` as it does not imply a specific orbital configuration. |  AU, arcsec |
+| `positionangle` | `binary` | Position angle | degree |
 | `eccentricity` 	| `binary`, `planet` | Eccentricity  | |
 | `periastron` 	| `binary`, `planet` | Longitude of periastron | degree  |
 | `longitude` 	| `binary`, `planet` | Mean longitude at a given Epoch (same for all planets in one system) | degree  |
+| `meananomaly`	| `binary`, `planet` | Mean anomaly at a given Epoch (same for all planets in one system) | degree  |
 | `ascendingnode` 	| `binary`, `planet` | Longitude of the ascending node | degree  |
 | `inclination` 	| `binary`, `planet` | Inclination of the orbit | degree  |
 | `epoch` | `system` | Epoch for the orbital elements | BJD |
 | `period`	 	| `binary`, `planet` | Orbital period   | day  |
 | `transittime` | `binary`, `planet` | Time of the center of a transit | BJD |
+| `periastrontime` | `binary`, `planet` | Time of periastron | BJD |
 | `mass`		| `planet`, `star` |Mass (or m sin(i) for radial velocity planets) | Jupiter masses (`planet`), Solar masses (`star`)  |
 | `radius`		| `planet`, `star` |Physical radius | Jupiter radii (`planet`), Solar radii (`star`)  |
 | `temperature`	| `planet`, `star` |Temperature (surface or equilibrium) | Kelvin  |
 | `age`		| `planet`, `star` |Age | Gyr  |
 | `metallicity`	| `star` | Stellar metallicity  | log, relative to solar  |
-| `spectraltype`	| `star` | Spectral type  |   |
-| `magB`		| `binary`, `star` | B magnitude |   |
-| `magV`		| `binary`, `star` | Visual magnitude |   |
-| `magI`		| `binary`, `star` | I magnitude |   |
-| `magJ`		| `binary`, `star` | J magnitude |   |
-| `magH`		| `binary`, `star` | H magnitude |   |
-| `magK`		| `binary`, `star` | K magnitude |   |
+| `spectraltype`	| `star`, `planet` | Spectral type  |   |
+| `magB`		| `binary`, `star`, `planet` | B magnitude |   |
+| `magV`		| `binary`, `star`, `planet` | Visual magnitude |   |
+| `magR`		| `binary`, `star`, `planet` | R magnitude |   |
+| `magI`		| `binary`, `star`, `planet` | I magnitude |   |
+| `magJ`		| `binary`, `star`, `planet` | J magnitude |   |
+| `magH`		| `binary`, `star`, `planet` | H magnitude |   |
+| `magK`		| `binary`, `star`, `planet` | K magnitude |   |
 | | | | |
 | `discoverymethod` 	| `planet` | Discovery method of the planet. For example: timing, RV, transit, imaging.  |   |
 | `istransiting` 	| `planet` | Whether the planet is transiting (1) or not (0).  |   |
